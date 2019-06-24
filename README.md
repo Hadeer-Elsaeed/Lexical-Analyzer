@@ -23,6 +23,7 @@ symbol table to know the type of token .
 1-Scanner
 Performs reading of input characters, removal of white
 spaces and comments.
+
 2-Lexical Analysis
 Produce tokens as the output
 
@@ -33,9 +34,12 @@ token and lexical analyzer gets character by character
 with cooperation with symbol table and regular
 expressions known if the character make a token or not..
 If it makes token, lexical analyzer sends it to the parser.
+
 Token → Set of strings defining an atomic element with
 defined meaning.
+
 Pattern→ rule describing a set of string (RE-DFA-NFA)
+
 lexema→ a sequence of characters that match some
 pattern.
 
@@ -52,3 +56,32 @@ pattern.
 - <arith_symbol , +>
 - <id , b>
 
+# Regular Expressions :
+In most programming languages , tokens are
+described by regular expressions , regular
+expressions are used to describe search patterns .
+it is used by lex ,flex ,jlex and jflex.
+we specify the tokens to match using regular
+expressions, and the action to perform in a
+conventional programming language .. i will use
+Jflex .
+
+# JFlex :
+A lexical analyzer generator takes as input a
+specification with a set of regular expressions and
+corresponding actions. It generates a program (a lexer)
+that reads input, matches the input against the regular
+expressions in the spec file, and runs the corresponding
+action if a regular expression matched.
+JFlex lexers are based on deterministic finite automata
+(DFAs). They are fast, without expensive backtracking.
+# 
+"input" :
+- description of token structure (regular expressions)
+- info. on how to “process” different tokens  
+# 
+"output":
+- implementation of NFA-based function ,convert NFA
+to DFA and minimize DFA that recognizes tokens (as
+specified by RE rules) processes them (as specified by
+actions).
