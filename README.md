@@ -1,5 +1,5 @@
 # Lexical Analyzer
-#"lexical Analyzer"
+
 - the first part of the compiler , lexical analysis is
 considered a process of taking an input string of
 characters (such as the source code of a computer
@@ -18,15 +18,15 @@ program that simulates the resulting DFA ma
 - While dividing tokens ,it’s necessary to return to
 symbol table to know the type of token .
 
- "Stages of a lexical analyzer " :
- 
+ #Stages of a lexical analyzer  :
+
 1-Scanner
 Performs reading of input characters, removal of white
 spaces and comments.
 2-Lexical Analysis
 Produce tokens as the output
 
-"Interaction of lexical analyzer with parser" :
+#Interaction of lexical analyzer with parser :
 
 Parser give signal (method)to lexical analyzer to give it
 token and lexical analyzer gets character by character
