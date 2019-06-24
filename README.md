@@ -85,3 +85,43 @@ JFlex lexers are based on deterministic finite automata
 to DFA and minimize DFA that recognizes tokens (as
 specified by RE rules) processes them (as specified by
 actions).
+#
+How JFlex works ?
+JFlex takes a JFlex program and creates a Java file. I give
+the JFlex program a suffix of “.jflex” . The default name
+for the Java class generated is Yylex, and the code is
+written to a file called Yylex.java, although this can be
+changed, using the %class directive.
+there are two provided constructors for the lexical
+analyser class. The primary one takes a Reader object
+as a parameter. The secondary one takes an
+InputStream, which it converts into a Reader and
+invokes the primary constructor. The parameter
+represents an object that provides the input to be
+lexically analysed. For example, the parameter can be a
+StringReader (if we want to obtain the input from a
+String) or an InputStream (if we want to obtain the text
+from a file).
+The lexical analyser class has a method for getting a
+token. The default name for this method is yylex(),
+although this can be changed, using the %function
+directive. The default return type is Yytoken, although
+this can be changed, using the %type directive. This
+method loops, matching the input to regular
+expressions, and performing the action associated with
+that regular expression. If the action contains a return
+statement, the method returns the value indicated.
+
+
+# JFlex Program Format :
+   /* User code */
+   %%
+   /* Options and declarations */
+   %%
+   /* Lexical Rules */
+ #  
+"Lexical Rules":
+Rule = Pattern + Action
+Pattern = Regular Expression
+Action = Snippet of Java code (Actions triggered
+whenever pattern matched)
