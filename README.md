@@ -18,7 +18,7 @@ program that simulates the resulting DFA ma
 - While dividing tokens ,it’s necessary to return to
 symbol table to know the type of token .
 
- #Stages of a lexical analyzer  :
+ # Stages of a lexical analyzer  :
 
 1-Scanner
 Performs reading of input characters, removal of white
@@ -26,7 +26,7 @@ spaces and comments.
 2-Lexical Analysis
 Produce tokens as the output
 
-#Interaction of lexical analyzer with parser :
+# Interaction of lexical analyzer with parser :
 
 Parser give signal (method)to lexical analyzer to give it
 token and lexical analyzer gets character by character
@@ -40,7 +40,7 @@ lexema→ a sequence of characters that match some
 pattern.
 
 
-#Example → Input string “ size:=a*20+b “
+# Example → Input string “ size:=a*20+b “
 
 <token,lexeme>pairs:
 - <id , size>
