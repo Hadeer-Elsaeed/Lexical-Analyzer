@@ -115,13 +115,20 @@ statement, the method returns the value indicated.
 
 # JFlex Program Format :
    /* User code */
+
    %%
+
    /* Options and declarations */
+
    %%
+
    /* Lexical Rules */
  #  
 "Lexical Rules":
+
 Rule = Pattern + Action
+
 Pattern = Regular Expression
+
 Action = Snippet of Java code (Actions triggered
 whenever pattern matched)
